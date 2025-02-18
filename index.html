@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marhaban ya Ramadhan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌙 Marhaban ya Ramadhan 🌙</h1>
+        <button id="toggle-theme">🌙 Ganti Tema</button>
+
+        <nav>
+            <button onclick="showSection('quran')">Al-Qur'an</button>
+            <button onclick="showSection('doa')">Doa Puasa</button>
+            <button onclick="showSection('sholat')">Niat Sholat</button>
+            <button onclick="showSection('countdown')">Hitungan Mundur</button>
+        </nav>
+
+        <div id="quran" class="content-section">
+            <h1>📖 Pilih Surat</h1>
+            <input type="number" id="surah-number" min="1" max="114" placeholder="Masukkan nomor surat">
+            <select id="surah-dropdown"></select>
+            <button onclick="fetchSurah()">Baca</button>
+            <div id="quran-content"></div>
+        </div>
+
+        <div id="doa" class="content-section" style="display:none;">
+            <h1>🙏 Doa Niat Puasa & Buka Puasa</h1>
+            <div id="doa-content"></div>
+        </div>
+
+        <div id="sholat" class="content-section" style="display:none;">
+            <h1>🕌 Niat Sholat Lima Waktu</h1>
+            <div id="sholat-content"></div>
+        </div>
+
+        <div id="countdown" class="content-section" style="display:none;">
+            <h1>⏳ Hitungan Mundur</h1>
+            <p>Ramadhan: <span id="ramadhan-countdown"></span></p>
+            <p>Idul Fitri: <span id="idulfitri-countdown"></span></p>
+        </div>
+    </div>
+
+    <div class="imsakiyah-container">
+        <h1>🕌 Waktu Imsak & Berbuka</h1>
+        <p><strong>Imsak:</strong> <span id="imsak-time">--:--</span></p>
+        <p><strong>Berbuka:</strong> <span id="iftar-time">--:--</span></p>
+        <p id="countdown-text"></p>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="surah.js"></script>
+    <script src="doa.js"></script>
+    <script src="sholat.js"></script>
+    <script src="countdown.js"></script>
+    <script src="imsakiyah.js"></script>
+</body>
+</html>

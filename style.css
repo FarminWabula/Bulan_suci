@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* Style Umum */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('https://source.unsplash.com/1600x900/?ramadan,mosque') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    width: 80%;
+    animation: fadeIn 2s;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    font-size: 18px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #ff8c00, #ff4500);
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ff4500, #ff8c00);
+    transform: scale(1.05);
+}
+
+.content-section {
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#toggle-theme {
+    background: linear-gradient(45deg, #0f2027, #203a43);
+}
+
+#toggle-theme:hover {
+    background: linear-gradient(45deg, #203a43, #0f2027);
+}
+
+.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+.dark-mode .container {
+    background: rgba(20, 20, 20, 0.9);
+}
+
+.dark-mode .content-section {
+    background: rgba(50, 50, 50, 0.9);
+    color: white;
+}
+
+.dark-mode button {
+    background: linear-gradient(45deg, #4e54c8, #8f94fb);
+}
+
+.dark-mode button:hover {
+    background: linear-gradient(45deg, #8f94fb, #4e54c8);
+}
+
+.imsakiyah-container {
+    background: rgba(9, 154, 164, 0.9);
+    color: black;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.imsakiyah-container h2 {
+    font-family: 'Amiri', serif;
+    font-size: 22px;
+    color: #d35400;
+}
+
+.imsakiyah-container p {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+#countdown-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0e0e0d;
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(231, 76, 60, 0.1);
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0px 0px 10px rgba(231, 76, 60, 0.2);
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0.6; }
+}
+
+.dark-mode .imsakiyah-container {
+    background: rgba(20, 20, 20, 0.9);
+    color: white;
+}
+
+.dark-mode #countdown-text {
+    background: rgba(231, 76, 60, 0.3);
+}
+
+/* 🔹 Tampilan di HP (Lebar kurang dari 768px) */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    input {
+        font-size: 16px;
+        width: 100%;
+    }
+    button {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
+
+/* 🔹 Tampilan di Tablet (Lebar antara 768px - 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        width: 85%;
+    }
+    h1 {
+        font-size: 40px;
+    }
+}
+
+/* 🔹 Tampilan di Komputer (Lebih dari 1024px) */
+@media screen and (min-width: 1025px) {
+    .container {
+        width: 70%;
+    }
+}
