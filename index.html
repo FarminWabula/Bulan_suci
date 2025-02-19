@@ -12,14 +12,12 @@
         <h1>🌙 Marhaban ya Ramadhan 🌙</h1>
         <button id="toggle-theme">🌙 Ganti Tema</button>
 
-        <div id="jadwal-sholat" class="content-section" style="display:none;"></div>
-            <button onclick="showSection('jadwal-sholat')">📅 Jadwal Sholat</button>
-
         <nav>
             <button onclick="showSection('quran')">📖 Al-Qur'an</button>
             <button onclick="showSection('doa')">🙏 Doa Puasa</button>
-            <button onclick="showSection('sholat')">🕌 Niat Sholat</button>
-            <button onclick="showSection('countdown')">⏳ Hitungan Mundur</button>
+            <button onclick="showSection('sholat')">🕌 Waktu & Niat Sholat</button>
+            <button onclick="showSection('countdown')">⏳ Hitung Mundur</button>
+            <button onclick="showSection('catatan')">✍️ Catatan Ramadhan</button>
         </nav>
 
         <div id="quran" class="content-section">
@@ -27,7 +25,7 @@
             <input type="text" id="search-surah" placeholder="Tuliskan nama surat..." oninput="searchSurah()">
             <div id="search-results"></div>
             <h3>Atau Pilih dari Daftar:</h3>
-            <select id="surah-dropdown"></select>
+            <select id="surah-dropdown" onchange="fetchSurah()"></select>
             <div id="quran-content"></div>
         </div>
 
@@ -37,16 +35,25 @@
         </div>
 
         <div id="sholat" class="content-section" style="display:none;">
-            <h2>🕌 Niat Sholat Lima Waktu</h2>
+            <h2>🕌 Waktu Sholat & Niat Sholat</h2>
+            <div id="jadwal-sholat"></div>
             <div id="sholat-content"></div>
         </div>
-        <div id="tafsir-content" class="content-section" style="display:none;"></div>
-            <button onclick="showSection('tafsir-content')">📖 Tafsir Al-Qur'an</button>
+
+        <div id="catatan" class="content-section" style="display:none;">
+            <h2>✍️ Catatan Ramadhan</h2>
+            <p>Tuliskan target ibadah atau catatan penting selama Ramadhan:</p>
+            <textarea id="catatan-input" placeholder="Contoh: Saya ingin menyelesaikan membaca 1 juz setiap hari..."></textarea>
+            <button onclick="saveCatatan()">Simpan</button>
+
+            <h3>📌 Daftar Catatan</h3>
+            <div id="catatan-list"></div>
+        </div>
 
         <div id="countdown" class="content-section" style="display:none;">
             <h2>⏳ Hitungan Mundur</h2>
-            <p>Ramadhan: <span id="ramadhan-countdown"></span></p>
-            <p>Idul Fitri: <span id="idulfitri-countdown"></span></p>
+            <p>Ramadhan: <span id="ramadhan-countdown">-- hari</span></p>
+            <p>Idul Fitri: <span id="idulfitri-countdown">-- hari</span></p>
         </div>
 
         <div class="imsakiyah-container">
@@ -56,19 +63,13 @@
             <p id="countdown-text"></p>
         </div>
 
-        <div id="sholawat" class="content-section" style="display:none;">
-            <h2>🎵 Dengarkan Sholawat</h2>
-            <div id="sholawat-content"></div>
-            <button onclick="loadSholawat()">Putar Sholawat</button>
-        </div>
-    </div>
 
     <script src="script.js"></script>
     <script src="surah.js"></script>
     <script src="doa.js"></script>
     <script src="sholat.js"></script>
-    <script src="countdown.js"></script>
-    <script src="imsakiyah.js"></script>
-    <script src="sholawat.js"></script>
+    <script src="catatan.js"></script>
+    <script src="waktu.js"></script>
+
 </body>
 </html>
