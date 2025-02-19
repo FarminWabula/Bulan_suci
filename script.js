@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(script);
 });
 
-let backgroundAudio = new Audio("123.mp3");
+let backgroundAudio = new Audio("ramadan_tiba.mp3");
 backgroundAudio.volume = 0.5;
 
 function playAudio() {
