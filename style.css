@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: url('https://source.unsplash.com/1600x900/?ramadan,mosque') no-repeat center center fixed;
+    background: url('image.png') no-repeat center center fixed;
     background-size: cover;
     color: white;
     text-align: center;
@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.273);
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
@@ -42,7 +42,7 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 8px;
-    background: linear-gradient(45deg, #ff8c00, #ff4500);
+    background: linear-gradient(45deg, #ff8c00bd, #ff4400c7);
     color: white;
     transition: all 0.3s ease;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
@@ -54,12 +54,16 @@ button:hover {
 }
 
 .content-section {
-    background: rgba(255, 255, 255, 0.9);
+    background: url('image.png') no-repeat center center fixed;
     color: black;
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 20px;
     text-align: left;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 #toggle-theme {
@@ -71,16 +75,17 @@ button:hover {
 }
 
 .dark-mode {
-    background: #121212;
+    background: url('image.png') no-repeat center center fixed;
     color: white;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
 }
 
 .dark-mode .container {
-    background: rgba(20, 20, 20, 0.9);
+    background: rgba(131, 126, 126, 0);
 }
 
 .dark-mode .content-section {
-    background: rgba(50, 50, 50, 0.9);
+    background: rgba(50, 50, 50, 0.166);
     color: white;
 }
 
@@ -270,13 +275,13 @@ textarea {
     font-size: 24px;
     direction: rtl;
     text-align: right;
-    color: #333;
+    color: #0b0000;
 }
 
 .latin {
     font-family: "Arial", sans-serif;
     font-size: 18px;
-    color: #444;
+    color: #34a12e;
     text-align: left;
     font-style: italic;
 }
@@ -284,16 +289,16 @@ textarea {
 .translation {
     font-family: "Arial", sans-serif;
     font-size: 16px;
-    color: #666;
+    color: #0c0a0a;
     text-align: left;
 }
 
 .ayah-container {
-    background: #49cd32fe;
+    background: #e6e0e0d8;
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 10px;
-    border-left: 5px solid #4CAF50;
+    border-left: 5px solid #111211;
 }
 
 .ayah-container p {
